@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", // Use modern JavaScript features
+    "module": "ESNext", // Use ESNext module system for compatibility with modern tools
+    "lib": ["DOM", "DOM.Iterable", "ES2020"], // Include React and DOM types
+    "jsx": "react-jsx", // Enable JSX syntax for React
+    "strict": true, // Enable strict type checking
+    "esModuleInterop": true, // Allow default imports from CommonJS modules
+    "moduleResolution": "Node", // Resolve modules in Node.js style
+    "resolveJsonModule": true, // Allow importing JSON files
+    "isolatedModules": true, // Ensure each file can be safely transpiled
+    "skipLibCheck": true, // Skip type checking of declaration files for faster builds
+    "forceConsistentCasingInFileNames": true, // Enforce consistent file naming
+    "noImplicitAny": true, // Disallow variables with an implicit `any` type
+    "strictNullChecks": true, // Ensure null and undefined are handled explicitly
+    "strictFunctionTypes": true, // Enable strict checking of function types
+    "strictBindCallApply": true, // Check argument types in `bind`, `call`, and `apply`
+    "noImplicitThis": true, // Disallow `this` being used implicitly
+    "alwaysStrict": true, // Parse in strict mode and emit "use strict"
+    "noUnusedLocals": true, // Report errors on unused local variables
+    "noUnusedParameters": true, // Report errors on unused function parameters
+    "noImplicitReturns": true, // Ensure all code paths in a function return a value
+    "noFallthroughCasesInSwitch": true, // Disallow fallthrough cases in switch statements
+    "baseUrl": "./", // Set the base directory for module resolution
+    "paths": {
+      "@components/*": ["src/components/*"], // Alias for components
+      "@services/*": ["src/services/*"], // Alias for services
+      "@styles/*": ["src/styles/*"], // Alias for styles
+      "@types/*": ["src/types/*"] // Alias for types
+    },
+    "outDir": "dist", // Output directory for compiled files
+    "rootDir": "src", // Root directory of the source files
+    "typeRoots": ["node_modules/@types", "src/types"], // Include custom and default type definitions
+    "allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export
+    "incremental": true // Enable incremental compilation for faster builds
+  },
+  "include": ["src"], // Include all files in the src directory
+  "exclude": ["node_modules", "dist", "build"] // Exclude unnecessary directories
+}
