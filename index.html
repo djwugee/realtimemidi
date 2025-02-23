@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Real-time Polyphonic MIDI Guitar Application">
+    <meta name="author" content="djwugee">
+    <meta name="keywords" content="MIDI, Guitar, Real-time, Audio Processing, Web Audio API, Web MIDI API">
+    <title>Real-time MIDI Guitar</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <h1>Real-time MIDI Guitar</h1>
+        <p>Convert your guitar audio input into MIDI notes in real-time.</p>
+    </header>
+
+    <main>
+        <section id="controls">
+            <button id="startButton">Start MIDI Guitar</button>
+            <div id="settings">
+                <label for="onsetThreshold">Onset Threshold:</label>
+                <input type="range" id="onsetThreshold" min="0.01" max="0.1" step="0.01" value="0.02">
+                <span id="onsetThresholdValue">0.02</span>
+
+                <label for="noteThreshold">Note Confidence Threshold:</label>
+                <input type="range" id="noteThreshold" min="0.5" max="1.0" step="0.01" value="0.8">
+                <span id="noteThresholdValue">0.8</span>
+            </div>
+        </section>
+
+        <section id="output">
+            <h2>Detected Notes</h2>
+            <div id="outputDiv"></div>
+        </section>
+
+        <section id="visualizer">
+            <h2>Audio Visualizer</h2>
+            <canvas id="visualizerCanvas" width="800" height="200"></canvas>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 djwugee. All rights reserved.</p>
+    </footer>
+
+    <script src="js/utils.js"></script>
+    <script src="js/audioProcessor.js"></script>
+    <script src="js/midiConverter.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
